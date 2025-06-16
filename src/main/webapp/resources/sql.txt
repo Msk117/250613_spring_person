@@ -1,0 +1,40 @@
+database: springdb
+username : springuser
+password : mysql
+
+-- DB생성
+create database springdb;
+-- 유저생성
+create user 'springuser'@'localhost' identified by 'mysql';
+-- 권한부여
+grant all privileges on springdb.* to 'springuser'@'localhost';
+-- 권한적용
+flush privileges;
+
+use springdb;
+
+-- 2025-05-30
+
+create table board(
+bno bigint not null auto_increment,
+title varchar(200) not null,
+writer varchar(200) not null,
+content text,
+is_del varchar(5) default 'N',
+reg_date datetime default now(),
+read_count int default 0,
+primary key(bno));
+
+-- 2025-06-04
+
+create table comment(
+cno bigint auto_increment,
+bno bigint not null,
+writer varchar(500) not null,
+content text,
+reg_date datetime default now(),
+primary key(cno));
+
+--2025 -06-09
+alter table board add cmt_qty int default 0;
+alter table board add file_qty int default 0;

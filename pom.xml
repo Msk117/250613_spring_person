@@ -248,18 +248,6 @@
 			<artifactId>mybatis</artifactId>
 			<version>3.5.19</version>
 		</dependency>
-<!-- Log4j2 Core -->
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.20.0</version>
-</dependency>
-<!-- Log4j2 API -->
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-api</artifactId>
-    <version>2.20.0</version>
-</dependency>
 
 	</dependencies>
 	<build>
