@@ -31,5 +31,9 @@ public interface BoardDAO {
 
 	int fileQtyUpdate(@Param("bno")long bno, @Param("size")int size);
 
+	BoardVO getPrev(Long bno);
+
+	BoardVO getNext(Long bno);
+
 	
 }

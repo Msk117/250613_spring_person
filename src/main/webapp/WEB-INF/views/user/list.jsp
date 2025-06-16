@@ -8,7 +8,7 @@
 	<div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
 		<c:forEach items="${userList}" var="uvo">
 			<div class="col">
-				<div class="card bg-dark text-light border-0 shadow-lg h-100 rounded-4">
+				<div class="card bg-dark text-light border-0 shadow-lg h-100 rounded-4 hover-effect">
 					<img src="/resources/image/pea3-3.jpg" class="card-img-top rounded-top" alt="User Image" style="height: 200px; object-fit: cover;">
 					<div class="card-body">
 						<h5 class="card-title fw-bold">${uvo.nickName}</h5>

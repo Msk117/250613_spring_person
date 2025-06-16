@@ -26,6 +26,9 @@ public interface BoardService {
 	int removeFile(String uuid);
 
 	FileVO getFile(String uuid);
-
+	
+	BoardVO getPrev(Long bno);
+	
+	BoardVO getNext(Long bno);
 
 }

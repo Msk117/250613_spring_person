@@ -90,10 +90,34 @@
 			</div>
 		</c:if>
 	</sec:authorize>
+	
+	<!-- 이전글/다음글 네비게이션 -->
+	<div class="d-flex justify-content-between align-items-center mb-4">
+		<c:choose>
+			<c:when test="${not empty bdto.prev}">
+				<a href="/board/detail?bno=${bdto.prev.bno}"
+					class="btn btn-outline-info"> ← Prev</a>
+			</c:when>
+			<c:otherwise>
+				<span class="text-muted">← Prev X</span>
+			</c:otherwise>
+		</c:choose>
+
+		<c:choose>
+			<c:when test="${not empty bdto.next}">
+				<a href="/board/detail?bno=${bdto.next.bno}"
+					class="btn btn-outline-info">Next →</a>
+			</c:when>
+			<c:otherwise>
+				<span class="text-muted">X Next →</span>
+			</c:otherwise>
+		</c:choose>
+	</div>
+
 
 	<!-- 목록 버튼 -->
 	<div class="mb-4">
-		<a href="/board/list" class="btn btn-outline-light">← Back to List</a>
+		<a href="/board/list" class="btn btn-outline-light">Back to List</a>
 	</div>
 
 	<!-- 댓글 입력창 -->

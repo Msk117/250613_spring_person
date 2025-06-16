@@ -29,6 +29,17 @@
 			</span>
 		</button>
 	</form>
+	<!-- 정렬 버튼 UI -->
+	<div class="d-flex justify-content-end mb-3 gap-2">
+		<a href="/board/list?pageNo=1&qty=${ph.pgvo.qty}&type=${ph.pgvo.type}&keyword=${ph.pgvo.keyword}&sort=recent"
+		   class="btn btn-outline-light btn-sm ${ph.pgvo.sort eq 'recent' ? 'active' : ''}">
+			New
+		</a>
+		<a href="/board/list?pageNo=1&qty=${ph.pgvo.qty}&type=${ph.pgvo.type}&keyword=${ph.pgvo.keyword}&sort=read"
+		   class="btn btn-outline-light btn-sm ${ph.pgvo.sort eq 'read' ? 'active' : ''}">
+			Most Viewed
+		</a>
+	</div>
 
 	<!-- 게시글 테이블 -->
 	<table class="table table-dark table-hover align-middle text-center shadow">

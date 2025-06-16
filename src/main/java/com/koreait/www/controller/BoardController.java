@@ -61,11 +61,16 @@ public class BoardController {
 	@GetMapping("/list")
 	public void list(Model m, PagingVO pgvo) {
 
-		List<BoardVO> list = bsv.getList(pgvo);
+		
+		if (pgvo.getSort() == null || pgvo.getSort().isEmpty()) {
+			pgvo.setSort("recent");
+		}
 
+		List<BoardVO> list = bsv.getList(pgvo); 
 		int totalCount = bsv.getTotalCount(pgvo);
+
 		PagingHandler ph = new PagingHandler(totalCount, pgvo);
-		log.info(">>>ph >> {}", ph);
+		log.info(">>> PagingHandler >> {}", ph);
 
 		m.addAttribute("ph", ph);
 		m.addAttribute("list", list);
@@ -87,6 +92,11 @@ public class BoardController {
 
 			return "redirect:/board/list";
 		}
+		BoardVO prev = bsv.getPrev(bno);
+		BoardVO next = bsv.getNext(bno);
+		bdto.setPrev(prev);
+		bdto.setNext(next);
+		
 		m.addAttribute("bdto", bdto);
 		m.addAttribute("bvo", bdto.getBvo());
 		m.addAttribute("flist", bdto.getFlist());

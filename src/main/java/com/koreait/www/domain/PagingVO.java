@@ -17,6 +17,8 @@ public class PagingVO {
 	private String type;
 	private String keyword;
 
+	private String sort;
+	
 	public PagingVO() {
 		this.pageNo = 1;
 		this.qty = 10;

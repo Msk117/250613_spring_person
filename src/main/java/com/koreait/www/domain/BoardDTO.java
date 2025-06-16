@@ -18,4 +18,11 @@ public class BoardDTO {
 	private BoardVO bvo;
 	private List<FileVO> flist;
 	
+	private BoardVO prev;
+	private BoardVO next;
+	
+	public BoardDTO(BoardVO bvo, List<FileVO> flist) {
+		this.bvo = bvo;
+		this.flist = flist;
+	}
 }

@@ -6,12 +6,12 @@
 <div class="container-md mt-5 text-light text-center">
 	<h1 class="display-5 fw-bold mb-3">Welcome to Spring Board</h1>
 
-	<p class="lead mb-4">The current server time is <span class="text-warning fw-semibold">${serverTime}</span>.</p>
+	<p class="lead mb-4"><span class="text-warning fw-semibold">${serverTime}</span>.</p>
 
 	
 	<div class="my-5">
 		<img src="/resources/image/pea2-1.jpg" alt="Main Illustration"
-			class="img-fluid rounded-4 shadow" style="max-width: 500px;">
+			class="img-fluid rounded-4 shadow hover-effect" style="max-width: 500px;">
 		<p class="mt-3 text-muted">Personal Spring Project</p>
 	</div>
 </div>

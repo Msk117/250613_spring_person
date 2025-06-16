@@ -12,7 +12,7 @@
 	<form action="/user/modify" method="post">
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 
-		<div class="card mx-auto shadow" style="width: 22rem;">
+		<div class="card mx-auto shadow hover-card" style="width: 22rem;">
 			<img src="/resources/image/pea1-1.jpg" class="card-img-top rounded-top" alt="Profile">
 			<div class="card-body bg-dark text-light">
 				<div class="mb-3">

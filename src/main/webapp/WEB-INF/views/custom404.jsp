@@ -5,9 +5,8 @@
     
     
 
-	<!--  --><div class="container-md d-flex flex-column align-items-center">
+	<div class="container-md d-flex flex-column align-items-center">
 	<h3 class="text-center">Custom 404 Page</h3>
 	<img alt="" src="/resources/image/404.png">
-	<%-- <h5> <c:out value="${exception }"></c:out> </h5>
-	 --%></div>	
+	</div>	
 <jsp:include page="layout/footer.jsp"></jsp:include>

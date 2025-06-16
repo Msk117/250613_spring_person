@@ -7,6 +7,21 @@
 	<title>footer Page</title>
 	<link href="/resources/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="/resources/dist/js/bootstrap.bundle.min.js"></script>
+	<style>
+	@keyframes rotate360 {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.rotate-logo {
+		animation: rotate360 15ss linear infinite;
+	}
+</style>
+	
 </head>
 <body class="bg-dark text-light d-flex flex-column min-vh-100">
 
@@ -18,8 +33,8 @@
 			
 			
 			<div class="d-flex align-items-center mb-2 mb-md-0">
-				<img src="/resources/image/daisy.jpg" alt="Logo" width="20" height="20" class="rounded-circle">
-				<small>© 2025 Company, Inc.</small>
+				<img src="/resources/image/daisy.jpg" alt="Logo" width="20" height="20" class="rounded-circle rotate-logo">
+				<small>, © 2025 Company, Inc.</small>
 			</div>
 
 			

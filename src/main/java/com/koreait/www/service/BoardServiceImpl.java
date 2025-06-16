@@ -138,4 +138,13 @@ public class BoardServiceImpl implements BoardService {
 		return fdao.getFile(uuid);
 	}
 
+	@Override
+	public BoardVO getPrev(Long bno) {
+	    return bdao.getPrev(bno);
+	}
+
+	@Override
+	public BoardVO getNext(Long bno) {
+	    return bdao.getNext(bno);
+	}
 }

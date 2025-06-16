@@ -13,12 +13,66 @@
 <link href="/resources/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="/resources/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+	@keyframes rotate360 {
+		from {
+			transform: rotate(360deg);
+		}
+		to {
+			transform: rotate(0deg);
+		}
+	}
+
+	.rotate-logo {
+		animation: rotate360 12s linear infinite;
+	}
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('/resources/image/back.jpg') no-repeat center center fixed;
+		background-size: cover; 
+		filter: blur(2px);      
+		opacity: 0.1;
+		z-index: -1;
+	}
+
+	
+	.hover-effect {
+		transition: transform 0.3s ease, filter 0.3s ease;
+	}
+	.hover-effect:hover {
+		transform: scale(1.05);
+		filter: brightness(1.2) saturate(1.2);
+	}
+	
+	.hover-card {
+  		transition: transform 0.3s ease;
+	}
+	.hover-card:hover {
+ 		transform: translateY(-5px) scale(1.02);
+  		box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.3);
+	}
+	
+	.hover-effect {
+	transition: transform 0.3s ease, filter 0.3s ease;
+	}
+	.hover-effect:hover {
+		transform: scale(1.05);
+		filter: brightness(1.2) saturate(1.2);
+	}
+	
+</style>
+
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
 		<div class="container">
 			<a class="navbar-brand d-flex align-items-center gap-2" href="/">
-				<img src="/resources/image/daisy.jpg" alt="Logo" width="45" height="45" class="rounded-circle">
+				<img src="/resources/image/daisy.jpg" alt="Logo" width="45" height="45" class="rounded-circle rotate-logo">
 				<span class="fw-bold">Spring Board</span>
 			</a>
 

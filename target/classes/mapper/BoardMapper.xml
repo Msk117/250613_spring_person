@@ -12,10 +12,35 @@
 	</insert>
 
 	<select id="getList" resultType="com.koreait.www.domain.BoardVO">
-		select * from board where is_del = 'N'
-		<include refid="search"></include>
-		order by bno desc limit #{pageStart}, #{qty}
+		select * from board
+		where is_del = 'N'
+	<include refid="search"></include>
+
+	<choose>
+		<when test="sort == 'read'">
+			order by read_count desc
+		</when>
+		<otherwise>
+			order by bno desc
+		</otherwise>
+	</choose>
+
+		limit #{pageStart}, #{qty}
 	</select>
+
+	<!-- 이전글 -->
+	<select id="getPrev" resultType="com.koreait.www.domain.BoardVO">
+		select bno, title from board where bno &lt; #{bno} and is_del = 'N' order by bno desc limit 1
+	</select>
+
+	<!-- 다음글 -->
+	<select id="getNext" resultType="com.koreait.www.domain.BoardVO">
+		select bno, title from board where bno &gt; #{bno} and is_del = 'N' order by bno asc limit 1
+	</select>
+
+
+
+
 	<select id="getDetail"
 		resultType="com.koreait.www.domain.BoardVO">
 		select * from board where bno = #{bno}
